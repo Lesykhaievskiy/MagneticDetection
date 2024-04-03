@@ -14,7 +14,6 @@
 		994078D42BBAD31D00E5F189 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994078D22BBAD31D00E5F189 /* LaunchScreen.storyboard */; };
 		994078DC2BBAD5C000E5F189 /* MagneticDetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078DB2BBAD5C000E5F189 /* MagneticDetectionVC.swift */; };
 		994078E02BBADD0300E5F189 /* MDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078DF2BBADD0300E5F189 /* MDButton.swift */; };
-		994078E22BBAFCEC00E5F189 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078E12BBAFCEC00E5F189 /* Elipse.swift */; };
 		994078E62BBC290500E5F189 /* Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078E52BBC290500E5F189 /* Pointer.swift */; };
 		994078E82BBC49E500E5F189 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078E72BBC49E500E5F189 /* BackgroundImage.swift */; };
 		994078EC2BBD517700E5F189 /* UIImage+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078EB2BBD517700E5F189 /* UIImage+ext.swift */; };
@@ -30,7 +29,6 @@
 		994078D52BBAD31D00E5F189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		994078DB2BBAD5C000E5F189 /* MagneticDetectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagneticDetectionVC.swift; sourceTree = "<group>"; };
 		994078DF2BBADD0300E5F189 /* MDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDButton.swift; sourceTree = "<group>"; };
-		994078E12BBAFCEC00E5F189 /* Elipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elipse.swift; sourceTree = "<group>"; };
 		994078E52BBC290500E5F189 /* Pointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointer.swift; sourceTree = "<group>"; };
 		994078E72BBC49E500E5F189 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
 		994078EB2BBD517700E5F189 /* UIImage+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ext.swift"; sourceTree = "<group>"; };
@@ -66,6 +64,7 @@
 		994078C62BBAD31C00E5F189 /* MagneticDetection */ = {
 			isa = PBXGroup;
 			children = (
+				994078EB2BBD517700E5F189 /* UIImage+ext.swift */,
 				994078DE2BBADCE400E5F189 /* Conponents */,
 				994078DD2BBADCD300E5F189 /* ViewControllers */,
 				994078C72BBAD31C00E5F189 /* AppDelegate.swift */,
@@ -74,7 +73,6 @@
 				994078D02BBAD31D00E5F189 /* Assets.xcassets */,
 				994078D22BBAD31D00E5F189 /* LaunchScreen.storyboard */,
 				994078D52BBAD31D00E5F189 /* Info.plist */,
-				994078EB2BBD517700E5F189 /* UIImage+ext.swift */,
 			);
 			path = MagneticDetection;
 			sourceTree = "<group>";
@@ -91,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				994078DF2BBADD0300E5F189 /* MDButton.swift */,
-				994078E12BBAFCEC00E5F189 /* Elipse.swift */,
 				994078E52BBC290500E5F189 /* Pointer.swift */,
 				994078E72BBC49E500E5F189 /* BackgroundImage.swift */,
 			);
@@ -175,7 +172,6 @@
 				994078E82BBC49E500E5F189 /* BackgroundImage.swift in Sources */,
 				994078C82BBAD31C00E5F189 /* AppDelegate.swift in Sources */,
 				994078CA2BBAD31C00E5F189 /* SceneDelegate.swift in Sources */,
-				994078E22BBAFCEC00E5F189 /* Elipse.swift in Sources */,
 				994078E62BBC290500E5F189 /* Pointer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

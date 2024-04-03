@@ -12,9 +12,6 @@ var isButtonTapped: Bool = false
 class MagneticDetectionVC: UIViewController {
     let SearchLable = UILabel()
     let mdButton = MDButton(backgroundColor: buttonColor, title: "Search")
-    let elipse = Elipse()
-    let rainbowElipse = Elipse()
-    let grayElipse = Elipse()
     let pointer = Pointer()
     let backgroundImage = BackgroundImage()
 
@@ -31,30 +28,47 @@ class MagneticDetectionVC: UIViewController {
             configureBackGroundImage()
             configureButton()
             configureLabel()
-            configurePurpleElipse()
-            configureRainbowElipse()
             configurePointer()
             configureLogoImage()
+            configureScaleImage()
         }
     
     
-    func configureLogoImage() {
-        let image = UIImageView()
-        image.image = UIImage(named: "logo")
-        image.contentMode = .scaleAspectFit
-        image.clipsToBounds = true
-        image.translatesAutoresizingMaskIntoConstraints = false
+    private  func configureScaleImage() {
+        let scaleImage = UIImageView()
+        scaleImage.image = UIImage(named: "Scale")
+        scaleImage.contentMode = .scaleAspectFit
+        scaleImage.clipsToBounds = true
+        scaleImage.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(image)
+        view.addSubview(scaleImage)
         NSLayoutConstraint.activate([
-            image.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor),
-            image.centerYAnchor.constraint(equalTo: backgroundImage.centerYAnchor),
-            image.heightAnchor.constraint(equalToConstant: 300),
-            image.widthAnchor.constraint(equalToConstant: 300)
+            scaleImage.bottomAnchor.constraint(equalTo: pointer.bottomAnchor, constant: -20),
+            scaleImage.centerXAnchor.constraint(equalTo: pointer.centerXAnchor),
+            scaleImage.widthAnchor.constraint(equalToConstant: 300),
+            scaleImage.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
     
-    func configureBackGroundImage() {
+    
+    private func configureLogoImage() {
+        let logoImage = UIImageView()
+        logoImage.image = UIImage(named: "logo")
+        logoImage.contentMode = .scaleAspectFit
+        logoImage.clipsToBounds = true
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(logoImage)
+        NSLayoutConstraint.activate([
+            logoImage.centerXAnchor.constraint(equalTo: backgroundImage.centerXAnchor),
+            logoImage.centerYAnchor.constraint(equalTo: backgroundImage.centerYAnchor),
+            logoImage.heightAnchor.constraint(equalToConstant: 300),
+            logoImage.widthAnchor.constraint(equalToConstant: 300)
+        ])
+    }
+    
+    
+    private func configureBackGroundImage() {
         backgroundImage.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: 250)
         
         let gradientLayer = CAGradientLayer()
@@ -64,7 +78,6 @@ class MagneticDetectionVC: UIViewController {
             UIColor.clear.cgColor,
             UIColor.black.cgColor
         ]
-       
         gradientLayer.locations = [0.0, 0.5, 1.0]
         
         backgroundImage.layer.addSublayer(gradientLayer)
@@ -77,10 +90,12 @@ class MagneticDetectionVC: UIViewController {
             backgroundImage.heightAnchor.constraint(equalToConstant: 250)
         ])
     }
+    
 
-    func configurePointer() {
+    private func configurePointer() {
         pointer.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pointer)
+        
         NSLayoutConstraint.activate([
             pointer.bottomAnchor.constraint(equalTo: SearchLable.topAnchor, constant: -60),
             pointer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -89,48 +104,8 @@ class MagneticDetectionVC: UIViewController {
         ])
     }
     
-    func configureRainbowElipse() {
-        rainbowElipse.gradientColors = [
-            UIColor(red: 0, green: 1, blue: 0, alpha: 0.7).cgColor,
-            UIColor(red: 1, green: 0.8, blue: 0, alpha: 0.7).cgColor,
-            UIColor(red: 1, green: 0, blue: 0, alpha: 0.7).cgColor
-        ]
-        
-        rainbowElipse.startPoint = CGPoint(x: 0, y: 0)
-        rainbowElipse.endPoint = CGPoint(x: 1, y: 0)
-        rainbowElipse.radius = 150
-        rainbowElipse.lineWdth = 20
-        view.addSubview(rainbowElipse)
-
-        NSLayoutConstraint.activate([
-            rainbowElipse.bottomAnchor.constraint(equalTo: elipse.topAnchor, constant: 290),
-            rainbowElipse.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            rainbowElipse.heightAnchor.constraint(equalToConstant: 400),
-            rainbowElipse.widthAnchor.constraint(equalToConstant: 400)
-        ])
-    }
     
-    func configurePurpleElipse() {
-        elipse.gradientColors = [
-            UIColor(red: 110/255, green: 90/255, blue: 211/255, alpha: 1).cgColor,
-            UIColor(red: 109/255, green: 89/255, blue: 211/255, alpha: 0).cgColor,
-            UIColor.clear.cgColor
-
-        ]
-        elipse.startPoint = CGPoint(x: 0.5, y: 0)
-        elipse.endPoint = CGPoint(x: 0.5, y: 1)
-        elipse.radius = 80
-        elipse.lineWdth = 10
-        view.addSubview(elipse)
-        NSLayoutConstraint.activate([
-            elipse.bottomAnchor.constraint(equalTo: mdButton.topAnchor, constant: -100),
-            elipse.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            elipse.heightAnchor.constraint(equalToConstant: 200),
-            elipse.widthAnchor.constraint(equalToConstant: 200)
-        ])
-    }
-    
-    func configureLabel() {
+    private func configureLabel() {
         SearchLable.text = "Search checking"
         SearchLable.textColor = .white
         SearchLable.translatesAutoresizingMaskIntoConstraints = false
@@ -144,10 +119,10 @@ class MagneticDetectionVC: UIViewController {
         
     }
     
-    func configureButton() {
+    
+    private func configureButton() {
         view.addSubview(mdButton)
         mdButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        
         
         NSLayoutConstraint.activate([
             mdButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
@@ -161,8 +136,6 @@ class MagneticDetectionVC: UIViewController {
  
     
     @objc func buttonTapped() {
-
-        
         isButtonTapped.toggle()
         SearchLable.text =  isButtonTapped ? "50 µT" : "Search checking"
         mdButton.setTitle(isButtonTapped ? "Stop" : "Search", for: .normal)
