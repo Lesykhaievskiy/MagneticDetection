@@ -17,8 +17,13 @@ class DeviceDetailsVC: UIViewController {
         configureBackGroundImage(backgroundImage: backgroundImage)
         configureCameraWidget()
         configureLogoImage(backgroundImage: backgroundImage, imageName: isError ? "failedImage" : "correctImage", height: 130, width: 130)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(popDetails))
     }
     
+    @objc func popDetails() {
+        dismissViewController()
+    }
 
 
     

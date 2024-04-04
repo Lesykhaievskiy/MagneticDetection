@@ -30,7 +30,7 @@ extension ResultVC: UITableViewDelegate,
         let isError = cell.isAnError
         let deviceDetailsVC = DeviceDetailsVC()
         deviceDetailsVC.isError = isError
-        navigationController?.pushViewController(deviceDetailsVC, animated: true)
+        presentViewController(deviceDetailsVC)
     }
 
     

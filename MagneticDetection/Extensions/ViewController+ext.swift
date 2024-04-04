@@ -54,4 +54,34 @@ extension UIViewController {
         let offset = scrollView.contentOffset.y + defaultOffset
         navigationController?.navigationBar.transform = .init(translationX: 0, y: -offset)
     }
+    
+    func presentViewController(_ viewControllerToPresent: UIViewController) {
+           let transition = CATransition()
+           transition.duration = 0.3
+           transition.type = CATransitionType.push
+           transition.subtype = CATransitionSubtype.fromRight
+           self.view.window!.layer.add(transition, forKey: kCATransition)
+            navigationController?.pushViewController(viewControllerToPresent, animated: false)
+       }
+    
+    func dismissViewController() {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        navigationController?.popViewController(animated: false)
+
+    }
+    
+    
+    func dismissToRootViewController() {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        navigationController?.popToRootViewController(animated: false)
+    }
+    
 }

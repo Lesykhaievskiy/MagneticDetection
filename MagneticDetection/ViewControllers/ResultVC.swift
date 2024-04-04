@@ -19,9 +19,12 @@ class ResultVC: UIViewController {
         configureLabels()
         navigationItem.title = "Result"
         overrideUserInterfaceStyle = .dark
-
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
     }
     
+     @objc func backButtonTapped() {
+       dismissToRootViewController()
+     }
 
     
     private func configureLabels() {

@@ -54,7 +54,7 @@ class MainVC: UIViewController {
     
     @objc private func magneticTileTapped() {
         let magneticVC = MagneticDetectionVC()
-        navigationController?.pushViewController(magneticVC, animated: true)
+        presentViewController(magneticVC)
     }
     
     

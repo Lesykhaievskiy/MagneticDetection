@@ -21,7 +21,13 @@ class MagneticDetectionVC: UIViewController {
         overrideUserInterfaceStyle = .dark
         setupUI()
         self.navigationItem.title = "Magnetic Detection"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(popVC))
     }
+    
+    @objc func popVC() {
+        dismissViewController()
+    }
+    
 
     
     private func setupUI() {

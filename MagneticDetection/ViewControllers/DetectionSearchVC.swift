@@ -4,21 +4,37 @@
 //
 //  Created by Олексій Гаєвський on 03.04.2024.
 //
-
 import Lottie
 import UIKit
+
 class DetectionSearchVC: UIViewController {
     let animationView = LottieAnimationView()
     let stopButton = MDButton(backgroundColor: Constants.buttonColor, title: "Stop")
+    let progressLabel = UILabel()
+    var progressTimer: Timer?
+    var progressPercentage: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         addAnimation()
         configureComponents()
+        startProgressTimer()
         overrideUserInterfaceStyle = .dark
-
     }
     
+    private func startProgressTimer() {
+        progressTimer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func updateProgress() {
+        guard progressPercentage < 100 else {
+            progressTimer?.invalidate()
+            return
+        }
+        progressPercentage += 10
+        progressLabel.text = "\(progressPercentage)%"
+    }
     
     private let scanningLabel: UILabel = {
         let label = UILabel()
@@ -49,13 +65,17 @@ class DetectionSearchVC: UIViewController {
         return label
     }()
     
-    
     private func configureComponents() {
         view.addSubview(wifiNameLabel)
         view.addSubview(scanningLabel)
         view.addSubview(foundDevices)
         view.addSubview(stopButton)
-        stopButton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
+        view.addSubview(progressLabel)
+        progressLabel.textColor = .white
+        progressLabel.textAlignment = .center
+        progressLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        progressLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             wifiNameLabel.bottomAnchor.constraint(equalTo: animationView.topAnchor, constant: -50),
             wifiNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -69,18 +89,20 @@ class DetectionSearchVC: UIViewController {
             foundDevices.centerXAnchor.constraint(equalTo: animationView.centerXAnchor),
             foundDevices.heightAnchor.constraint(equalToConstant: 35),
             
+            progressLabel.centerXAnchor.constraint(equalTo: animationView.centerXAnchor),
+            progressLabel.centerYAnchor.constraint(equalTo: animationView.centerYAnchor),
+            progressLabel.heightAnchor.constraint(equalToConstant: 40),
+            
             stopButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             stopButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stopButton.heightAnchor.constraint(equalToConstant: 50),
             stopButton.widthAnchor.constraint(equalToConstant: 350)
         ])
-        
     }
     
     @objc func stopButtonTapped() {
         navigationController?.popViewController(animated: true)
     }
-    
     
     private func addAnimation() {
         let path = Bundle.main.path(forResource: "animation", ofType: "json")
@@ -98,9 +120,8 @@ class DetectionSearchVC: UIViewController {
         animationView.play { [weak self] (finished) in
             if finished {
                 let resultVC = ResultVC()
-                self?.navigationController?.pushViewController(resultVC, animated: true)
+                self?.presentViewController(resultVC)
             }
         }
     }
 }
-
