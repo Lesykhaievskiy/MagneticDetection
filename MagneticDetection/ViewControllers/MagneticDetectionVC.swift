@@ -6,19 +6,19 @@
 //
 
 import UIKit
-let buttonColor: UIColor = UIColor(red: 109/255, green: 89/255, blue: 211/255, alpha: 1)
+
 var isButtonTapped: Bool = false
 
 class MagneticDetectionVC: UIViewController {
     let SearchLable = UILabel()
-    let mdButton = MDButton(backgroundColor: buttonColor, title: "Search")
+    let mdButton = MDButton(backgroundColor: Constants.buttonColor, title: "Search")
     let pointer = Pointer()
-    let backgroundImage = BackgroundImage()
+    let backgroundImage = BackgroundImage(imageName: "diogo-fagundes-JWPHnl1_OVI-unsplash")
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        overrideUserInterfaceStyle = .dark
         setupUI()
         self.navigationItem.title = "Magnetic Detection"
     }

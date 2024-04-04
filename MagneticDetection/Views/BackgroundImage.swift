@@ -6,12 +6,12 @@
 import UIKit
 
 class BackgroundImage: UIView {
-    
-    private let backgroundImage: UIImageView = {
+    var imageName: String = ""
+    private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .top
-        imageView.image = UIImage(named: "diogo-fagundes-JWPHnl1_OVI-unsplash")
+        imageView.image = UIImage(named: imageName)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
@@ -19,7 +19,7 @@ class BackgroundImage: UIView {
     
     private let overlayView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 35/255, green: 23/255, blue: 95/255, alpha: 0.6)
+        view.backgroundColor = UIColor(red: 35/255, green: 23/255, blue: 95/255, alpha: 0.4)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -29,6 +29,17 @@ class BackgroundImage: UIView {
         addSubview(backgroundImage)
         addSubview(overlayView)
         
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    init(imageName: String) {
+        super.init(frame: .zero)
+        self.imageName = imageName
+        addSubview(backgroundImage)
+        addSubview(overlayView)
         NSLayoutConstraint.activate([
             backgroundImage.topAnchor.constraint(equalTo: topAnchor),
             backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -40,10 +51,6 @@ class BackgroundImage: UIView {
             overlayView.trailingAnchor.constraint(equalTo: trailingAnchor),
             overlayView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {

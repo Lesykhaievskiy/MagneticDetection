@@ -16,8 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
      
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let magneticDetectionVC = MagneticDetectionVC()
-        let navigationController = UINavigationController(rootViewController: magneticDetectionVC)
+        let mainVC = MainVC()
+        let navigationController = UINavigationController(rootViewController: mainVC)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window

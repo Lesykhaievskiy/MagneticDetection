@@ -17,6 +17,22 @@
 		994078E62BBC290500E5F189 /* Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078E52BBC290500E5F189 /* Pointer.swift */; };
 		994078E82BBC49E500E5F189 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078E72BBC49E500E5F189 /* BackgroundImage.swift */; };
 		994078EC2BBD517700E5F189 /* UIImage+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078EB2BBD517700E5F189 /* UIImage+ext.swift */; };
+		994078EE2BBD841400E5F189 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078ED2BBD841400E5F189 /* MainVC.swift */; };
+		994078F12BBD87D400E5F189 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078F02BBD87D400E5F189 /* Tile.swift */; };
+		994078F32BBDABBD00E5F189 /* WIFIWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078F22BBDABBD00E5F189 /* WIFIWidget.swift */; };
+		994078F52BBDACBF00E5F189 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078F42BBDACBF00E5F189 /* Constants.swift */; };
+		994078F72BBDED5F00E5F189 /* DetectionSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994078F62BBDED5F00E5F189 /* DetectionSearchVC.swift */; };
+		994078FC2BBDF17200E5F189 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 994078FB2BBDF17200E5F189 /* Lottie */; };
+		994078FE2BBDF44600E5F189 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 994078FD2BBDF44600E5F189 /* animation.json */; };
+		99B069442BBE7D7500F80212 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B069432BBE7D7500F80212 /* ResultVC.swift */; };
+		99B069462BBE7F6200F80212 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B069452BBE7F6200F80212 /* CustomCell.swift */; };
+		99B069492BBE96C200F80212 /* ResultVC+ext..swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B069482BBE96C200F80212 /* ResultVC+ext..swift */; };
+		99B0694B2BBE9EB800F80212 /* DeviceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0694A2BBE9EB800F80212 /* DeviceDetailsVC.swift */; };
+		99B0694E2BBE9F7300F80212 /* MDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0694D2BBE9F7300F80212 /* MDLabel.swift */; };
+		99B069502BBE9FC100F80212 /* MDTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0694F2BBE9FC100F80212 /* MDTitleLabel.swift */; };
+		99B069522BBEA0F600F80212 /* CameraWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B069512BBEA0F600F80212 /* CameraWidget.swift */; };
+		99B069542BBEAA7C00F80212 /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B069532BBEAA7C00F80212 /* CameraCell.swift */; };
+		99B069562BBEB1F300F80212 /* ViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B069552BBEB1F300F80212 /* ViewController+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +48,21 @@
 		994078E52BBC290500E5F189 /* Pointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointer.swift; sourceTree = "<group>"; };
 		994078E72BBC49E500E5F189 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
 		994078EB2BBD517700E5F189 /* UIImage+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ext.swift"; sourceTree = "<group>"; };
+		994078ED2BBD841400E5F189 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		994078F02BBD87D400E5F189 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		994078F22BBDABBD00E5F189 /* WIFIWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WIFIWidget.swift; sourceTree = "<group>"; };
+		994078F42BBDACBF00E5F189 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		994078F62BBDED5F00E5F189 /* DetectionSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionSearchVC.swift; sourceTree = "<group>"; };
+		994078FD2BBDF44600E5F189 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
+		99B069432BBE7D7500F80212 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		99B069452BBE7F6200F80212 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		99B069482BBE96C200F80212 /* ResultVC+ext..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultVC+ext..swift"; sourceTree = "<group>"; };
+		99B0694A2BBE9EB800F80212 /* DeviceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsVC.swift; sourceTree = "<group>"; };
+		99B0694D2BBE9F7300F80212 /* MDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDLabel.swift; sourceTree = "<group>"; };
+		99B0694F2BBE9FC100F80212 /* MDTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTitleLabel.swift; sourceTree = "<group>"; };
+		99B069512BBEA0F600F80212 /* CameraWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWidget.swift; sourceTree = "<group>"; };
+		99B069532BBEAA7C00F80212 /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
+		99B069552BBEB1F300F80212 /* ViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994078FC2BBDF17200E5F189 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +96,9 @@
 		994078C62BBAD31C00E5F189 /* MagneticDetection */ = {
 			isa = PBXGroup;
 			children = (
-				994078EB2BBD517700E5F189 /* UIImage+ext.swift */,
+				99B0694C2BBE9F4700F80212 /* Labels */,
+				99B069472BBE969400F80212 /* Extensions */,
+				994078EF2BBD875D00E5F189 /* Views */,
 				994078DE2BBADCE400E5F189 /* Conponents */,
 				994078DD2BBADCD300E5F189 /* ViewControllers */,
 				994078C72BBAD31C00E5F189 /* AppDelegate.swift */,
@@ -73,6 +107,8 @@
 				994078D02BBAD31D00E5F189 /* Assets.xcassets */,
 				994078D22BBAD31D00E5F189 /* LaunchScreen.storyboard */,
 				994078D52BBAD31D00E5F189 /* Info.plist */,
+				994078F42BBDACBF00E5F189 /* Constants.swift */,
+				994078FD2BBDF44600E5F189 /* animation.json */,
 			);
 			path = MagneticDetection;
 			sourceTree = "<group>";
@@ -81,6 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				994078DB2BBAD5C000E5F189 /* MagneticDetectionVC.swift */,
+				994078ED2BBD841400E5F189 /* MainVC.swift */,
+				994078F62BBDED5F00E5F189 /* DetectionSearchVC.swift */,
+				99B069432BBE7D7500F80212 /* ResultVC.swift */,
+				99B0694A2BBE9EB800F80212 /* DeviceDetailsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,9 +130,56 @@
 			children = (
 				994078DF2BBADD0300E5F189 /* MDButton.swift */,
 				994078E52BBC290500E5F189 /* Pointer.swift */,
-				994078E72BBC49E500E5F189 /* BackgroundImage.swift */,
 			);
 			path = Conponents;
+			sourceTree = "<group>";
+		};
+		994078EF2BBD875D00E5F189 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99B069582BBEBD4000F80212 /* Widgets */,
+				99B069572BBEBD3000F80212 /* Cells */,
+				994078E72BBC49E500E5F189 /* BackgroundImage.swift */,
+				994078F02BBD87D400E5F189 /* Tile.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99B069472BBE969400F80212 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				994078EB2BBD517700E5F189 /* UIImage+ext.swift */,
+				99B069482BBE96C200F80212 /* ResultVC+ext..swift */,
+				99B069552BBEB1F300F80212 /* ViewController+ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		99B0694C2BBE9F4700F80212 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				99B0694D2BBE9F7300F80212 /* MDLabel.swift */,
+				99B0694F2BBE9FC100F80212 /* MDTitleLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		99B069572BBEBD3000F80212 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				99B069452BBE7F6200F80212 /* CustomCell.swift */,
+				99B069532BBEAA7C00F80212 /* CameraCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		99B069582BBEBD4000F80212 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				994078F22BBDABBD00E5F189 /* WIFIWidget.swift */,
+				99B069512BBEA0F600F80212 /* CameraWidget.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +198,9 @@
 			dependencies = (
 			);
 			name = MagneticDetection;
+			packageProductDependencies = (
+				994078FB2BBDF17200E5F189 /* Lottie */,
+			);
 			productName = MagneticDetection;
 			productReference = 994078C42BBAD31C00E5F189 /* MagneticDetection.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 994078BB2BBAD31C00E5F189;
+			packageReferences = (
+				994078FA2BBDF17200E5F189 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 994078C52BBAD31C00E5F189 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994078FE2BBDF44600E5F189 /* animation.json in Resources */,
 				994078D42BBAD31D00E5F189 /* LaunchScreen.storyboard in Resources */,
 				994078D12BBAD31D00E5F189 /* Assets.xcassets in Resources */,
 			);
@@ -165,14 +259,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B069492BBE96C200F80212 /* ResultVC+ext..swift in Sources */,
 				994078E02BBADD0300E5F189 /* MDButton.swift in Sources */,
 				994078DC2BBAD5C000E5F189 /* MagneticDetectionVC.swift in Sources */,
 				994078CC2BBAD31C00E5F189 /* ViewController.swift in Sources */,
+				99B069562BBEB1F300F80212 /* ViewController+ext.swift in Sources */,
+				994078F72BBDED5F00E5F189 /* DetectionSearchVC.swift in Sources */,
+				994078F32BBDABBD00E5F189 /* WIFIWidget.swift in Sources */,
 				994078EC2BBD517700E5F189 /* UIImage+ext.swift in Sources */,
+				994078EE2BBD841400E5F189 /* MainVC.swift in Sources */,
+				99B069462BBE7F6200F80212 /* CustomCell.swift in Sources */,
 				994078E82BBC49E500E5F189 /* BackgroundImage.swift in Sources */,
 				994078C82BBAD31C00E5F189 /* AppDelegate.swift in Sources */,
+				99B069502BBE9FC100F80212 /* MDTitleLabel.swift in Sources */,
+				994078F12BBD87D400E5F189 /* Tile.swift in Sources */,
 				994078CA2BBAD31C00E5F189 /* SceneDelegate.swift in Sources */,
+				99B069522BBEA0F600F80212 /* CameraWidget.swift in Sources */,
+				99B069542BBEAA7C00F80212 /* CameraCell.swift in Sources */,
+				99B0694B2BBE9EB800F80212 /* DeviceDetailsVC.swift in Sources */,
+				99B069442BBE7D7500F80212 /* ResultVC.swift in Sources */,
 				994078E62BBC290500E5F189 /* Pointer.swift in Sources */,
+				994078F52BBDACBF00E5F189 /* Constants.swift in Sources */,
+				99B0694E2BBE9F7300F80212 /* MDLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +493,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		994078FA2BBDF17200E5F189 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		994078FB2BBDF17200E5F189 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 994078FA2BBDF17200E5F189 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 994078BC2BBAD31C00E5F189 /* Project object */;
 }

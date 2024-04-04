@@ -1,13 +1,14 @@
 //
-//  MDButton.swift
+//  MDTitleLabel.swift
 //  MagneticDetection
 //
-//  Created by Олексій Гаєвський on 01.04.2024.
+//  Created by Олексій Гаєвський on 04.04.2024.
 //
 
 import UIKit
 
-class MDButton: UIButton {
+class MDTitleLabel: UILabel {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -18,20 +19,19 @@ class MDButton: UIButton {
     }
     
     
-    init(backgroundColor: UIColor, title: String) {
+    init(fontSize: CGFloat){
         super.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
         configure()
     }
     
     
     private func configure(){
-        layer.cornerRadius = 25
-        titleLabel?.textColor = .white
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        textColor = .label
+        self.textAlignment = .center
+        adjustsFontSizeToFitWidth = true
+        minimumScaleFactor = 0.9
+        lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
-
-    
 }
