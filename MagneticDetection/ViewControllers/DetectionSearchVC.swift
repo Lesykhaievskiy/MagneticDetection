@@ -75,6 +75,7 @@ class DetectionSearchVC: UIViewController {
         progressLabel.textAlignment = .center
         progressLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         progressLabel.translatesAutoresizingMaskIntoConstraints = false
+        stopButton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             wifiNameLabel.bottomAnchor.constraint(equalTo: animationView.topAnchor, constant: -50),
@@ -101,7 +102,7 @@ class DetectionSearchVC: UIViewController {
     }
     
     @objc func stopButtonTapped() {
-        navigationController?.popViewController(animated: true)
+        dismissViewController()
     }
     
     private func addAnimation() {

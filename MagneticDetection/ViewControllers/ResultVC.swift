@@ -18,6 +18,8 @@ class ResultVC: UIViewController {
         configureTableView()
         configureLabels()
         navigationItem.title = "Result"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = .black
         overrideUserInterfaceStyle = .dark
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
     }

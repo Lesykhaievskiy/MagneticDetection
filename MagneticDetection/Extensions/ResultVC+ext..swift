@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 extension ResultVC: UITableViewDelegate,
-                    UITableViewDataSource {
+                    UITableViewDataSource,
+                    UIScrollViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
